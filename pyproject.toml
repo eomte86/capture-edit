@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capture-edit"
+version = "0.1.0"
+description = "Capture a web page element and post-process it (crop, title, source caption) in one command."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = ["playwright", "Pillow"]
+
+[project.scripts]
+capture-edit = "capture_edit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["capture_edit*"]
